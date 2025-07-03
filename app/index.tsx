@@ -1,18 +1,48 @@
 import React from "react";
-import Gradient from "@/assets/Icons/Gradient";
-import DocumentData from "@/assets/Icons/DocumentData";
-import LightBulbPerson from "@/assets/Icons/LightbulbPerson";
-import Rocket from "@/assets/Icons/Rocket";
-import Logo from "@/assets/Icons/Logo";
 import { Box } from "@/components/ui/box";
 import { Text } from "@/components/ui/text";
+import { useRouter } from "expo-router";
 
 import { Link } from "expo-router";
+import { Pressable } from "@/components/ui/pressable";
 
 export default function Home() {
+  const router = useRouter();
   return (
-    <Box className="flex-1 h-[100vh] pt-10 px-3">
-      <Text>Hello</Text>
+    <Box className="flex-1 h-[100vh] pt-10 px-3 flex-col justify-center items-center gap-10">
+      <Box className="w-1/2 h-20">
+        <Pressable
+          className="w-full h-full"
+          onPress={() => {
+            router.push({ pathname: "/kana" });
+          }}
+        >
+          {({ pressed }) => (
+            <Box
+              className={`w-full h-full flex items-center justify-center border rounded-lg bg-amber-500 ${
+                pressed && "bg-amber-300"
+              }`}
+            >
+              <Text className="text-center">Hiragana</Text>
+              <Text>ひらがな</Text>
+            </Box>
+          )}
+        </Pressable>
+      </Box>
+      <Box className="w-1/2 h-20">
+        <Pressable className="w-full h-full">
+          {({ pressed }) => (
+            <Box
+              className={`w-full h-full flex items-center justify-center border rounded-lg bg-amber-500 ${
+                pressed && "bg-amber-300"
+              }`}
+            >
+              <Text className="text-center">Katakana</Text>
+              <Text>カタカナ</Text>
+            </Box>
+          )}
+        </Pressable>
+      </Box>
     </Box>
   );
 }
