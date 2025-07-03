@@ -1,3 +1,4 @@
+import { useRouter } from "expo-router";
 import { Box } from "../ui/box";
 import { Pressable } from "../ui/pressable";
 import { Text } from "../ui/text";
@@ -5,9 +6,21 @@ import { Text } from "../ui/text";
 interface KanaItemProps {
   kana: string;
   yomi: string;
+  sound: string;
 }
 
-const KanaItem: React.FC<KanaItemProps> = ({ kana, yomi }) => {
+const KanaItem: React.FC<KanaItemProps> = ({ kana, yomi, sound }) => {
+  const router = useRouter();
+  const handlePress = (kana: string, yomi: string, sound: string) => {
+    router.push({
+      pathname: "/",
+      params: {
+        kana: kana,
+        yomi: yomi,
+        sound: sound,
+      },
+    });
+  };
   return (
     <Pressable className="w-16 h-16">
       {({ pressed }) => (

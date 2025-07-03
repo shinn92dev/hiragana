@@ -1,4 +1,4 @@
-import { Letter } from "@/models/letter";
+import { Letter } from "@/models/Letter";
 
 export const HIRAGANA = [
   {
