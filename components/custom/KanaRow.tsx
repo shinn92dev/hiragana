@@ -16,15 +16,24 @@ const KanaRow: React.FC<KanaRowProps> = ({ rowObj }) => {
   return (
     <Box className="flex flex-row w-full my-5 px-2">
       <Box className="w-4/5 flex flex-row gap-2">
-        {kanaItems.map((item) => {
-          return (
-            <KanaItem
-              key={item.kana}
-              kana={item.kana}
-              yomi={item.yomi}
-              sound={item.soundUrl}
-            />
-          );
+        {kanaItems.map((item, index) => {
+          if (item !== null) {
+            return (
+              <KanaItem
+                key={item.kana}
+                kana={item.kana}
+                yomi={item.yomi}
+                sound={item.soundUrl}
+              />
+            );
+          } else {
+            return (
+              <Box
+                key={`empty-${index}`} // null 요소는 고유한 key가 없으므로 index를 사용합니다.
+                className="w-16" // KanaItem과 유사한 flex 속성
+              />
+            );
+          }
         })}
       </Box>
       {/* Placeholder for boss image */}

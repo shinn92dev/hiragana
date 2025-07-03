@@ -82,7 +82,9 @@ export const HIRAGANA = [
     title: "ya_hiragana",
     data: [
       new Letter("や", "ya", "ya.mp3"),
+      null,
       new Letter("ゆ", "yu", "yu.mp3"),
+      null,
       new Letter("よ", "yo", "yo.mp3"),
     ],
     imgPath: "ya_row_boss.png",
@@ -102,7 +104,9 @@ export const HIRAGANA = [
     title: "wa_hiragana",
     data: [
       new Letter("わ", "wa", "wa.mp3"),
+      null,
       new Letter("を", "wo", "wo.mp3"),
+      null,
       new Letter("ん", "n", "n.mp3"),
     ],
     imgPath: "wa_row_boss.png",
