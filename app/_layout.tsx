@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 import { useColorScheme } from "@/components/useColorScheme";
 import { Slot } from "expo-router";
+import { Stack } from "expo-router";
 
 import "../global.css";
 
@@ -61,7 +62,15 @@ function RootLayoutNav() {
   return (
     <GluestackUIProvider mode={colorScheme === "dark" ? "dark" : "light"}>
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-        <Slot />
+        {/* <Slot /> */}
+        <Stack
+          screenOptions={{
+            headerShown: true, // ✅ 헤더 보이게 설정
+            headerStyle: { backgroundColor: "#fbbf24" },
+            headerTintColor: "#000",
+            headerTitleStyle: { fontWeight: "bold" },
+          }}
+        />
       </ThemeProvider>
     </GluestackUIProvider>
   );
