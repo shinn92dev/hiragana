@@ -13,7 +13,7 @@ const KanaItem: React.FC<KanaItemProps> = ({ kana, yomi, sound }) => {
   const router = useRouter();
   const handlePress = (kana: string, yomi: string, sound: string) => {
     router.push({
-      pathname: "/",
+      pathname: "/kanaDetail",
       params: {
         kana: kana,
         yomi: yomi,
@@ -22,7 +22,10 @@ const KanaItem: React.FC<KanaItemProps> = ({ kana, yomi, sound }) => {
     });
   };
   return (
-    <Pressable className="w-16 h-16">
+    <Pressable
+      className="w-16 h-16"
+      onPress={() => handlePress(kana, yomi, sound)}
+    >
       {({ pressed }) => (
         <Box
           className={`w-full h-full flex-col items-center justify-center border bg-red-400 ${
