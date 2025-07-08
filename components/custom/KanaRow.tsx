@@ -13,9 +13,10 @@ interface KanaRowProps {
 
 const KanaRow: React.FC<KanaRowProps> = ({ rowObj }) => {
   const kanaItems = rowObj.data;
+  console.log(kanaItems);
   return (
-    <Box className="flex flex-row w-full my-5 px-2">
-      <Box className="w-4/5 flex flex-row gap-2">
+    <Box className="flex flex-row w-full my-1 px-2 py-3 bg-unlocked-bg rounded-lg border-unlocked-border border-2">
+      <Box className="w-4/5 flex flex-row gap-1">
         {kanaItems.map((item, index) => {
           if (item !== null) {
             return (
@@ -27,12 +28,7 @@ const KanaRow: React.FC<KanaRowProps> = ({ rowObj }) => {
               />
             );
           } else {
-            return (
-              <Box
-                key={`empty-${index}`} // null 요소는 고유한 key가 없으므로 index를 사용합니다.
-                className="w-16" // KanaItem과 유사한 flex 속성
-              />
-            );
+            return <Box key={`empty-${index}`} className="w-16" />;
           }
         })}
       </Box>

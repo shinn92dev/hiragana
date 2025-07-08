@@ -28,12 +28,12 @@ const KanaItem: React.FC<KanaItemProps> = ({ kana, yomi, sound }) => {
     >
       {({ pressed }) => (
         <Box
-          className={`w-full h-full flex-col items-center justify-center border rounded-md bg-red-400 ${
+          className={`w-full h-full flex-col items-center justify-center bg-unlocked-box border rounded-md ${
             pressed && "bg-red-200"
           }`}
         >
-          <Text className="font-bold text-2xl">{kana}</Text>
-          <Text className="text-sm">{yomi}</Text>
+          <Text className="font-bold text-4xl text-unlocked-text">{kana}</Text>
+          <Text className="text-sm text-unlocked-text">{yomi}</Text>
         </Box>
       )}
     </Pressable>

@@ -14,6 +14,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "unlocked-bg": "#FFF6C3",
+        "highlight-border": "#FFC700",
+        "highlight-bg": "FFD900",
+        "locked-bg": "#F2F2F2",
+        "unlocked-box": "#FC4848",
+        "locked-box": "#E0E0E0",
+        "unlocked-text": "#F7FFFF",
+        "locked-text": "#C1C0C5",
+
         primary: {
           0: "rgb(var(--color-primary-0)/<alpha-value>)",
           50: "rgb(var(--color-primary-50)/<alpha-value>)",
