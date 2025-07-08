@@ -10,7 +10,7 @@ export const HIRAGANA = [
       new Letter("え", "e", "e.mp3", "a_hiragana"),
       new Letter("お", "o", "o.mp3", "a_hiragana"),
     ],
-    imgPath: "a_row_boss.png",
+    imgPath: "01_tengu.png",
   },
   {
     title: "ka_hiragana",
@@ -21,7 +21,7 @@ export const HIRAGANA = [
       new Letter("け", "ke", "ke.mp3", "ka_hiragana"),
       new Letter("こ", "ko", "ko.mp3", "ka_hiragana"),
     ],
-    imgPath: "ka_row_boss.png",
+    imgPath: "02_rainjin.png",
   },
   {
     title: "sa_hiragana",
@@ -32,7 +32,7 @@ export const HIRAGANA = [
       new Letter("せ", "se", "se.mp3", "sa_hiragana"),
       new Letter("そ", "so", "so.mp3", "sa_hiragana"),
     ],
-    imgPath: "sa_row_boss.png",
+    imgPath: "03_kappa1.png",
   },
   {
     title: "ta_hiragana",
@@ -43,7 +43,7 @@ export const HIRAGANA = [
       new Letter("て", "te", "te.mp3", "ta_hiragana"),
       new Letter("と", "to", "to.mp3", "ta_hiragana"),
     ],
-    imgPath: "ta_row_boss.png",
+    imgPath: "04_anime_girl2.png",
   },
   {
     title: "na_hiragana",
@@ -54,7 +54,7 @@ export const HIRAGANA = [
       new Letter("ね", "ne", "ne.mp3", "na_hiragana"),
       new Letter("の", "no", "no.mp3", "na_hiragana"),
     ],
-    imgPath: "na_row_boss.png",
+    imgPath: "05_salary_man.png",
   },
   {
     title: "ha_hiragana",
@@ -65,7 +65,7 @@ export const HIRAGANA = [
       new Letter("へ", "he", "he.mp3", "ha_hiragana"),
       new Letter("ほ", "ho", "ho.mp3", "ha_hiragana"),
     ],
-    imgPath: "ha_row_boss.png",
+    imgPath: "06_oni1.png",
   },
   {
     title: "ma_hiragana",
@@ -76,7 +76,7 @@ export const HIRAGANA = [
       new Letter("め", "me", "me.mp3", "ma_hiragana"),
       new Letter("も", "mo", "mo.mp3", "ma_hiragana"),
     ],
-    imgPath: "ma_row_boss.png",
+    imgPath: "07_kuro_boozu.png",
   },
   {
     title: "ya_hiragana",
@@ -87,7 +87,7 @@ export const HIRAGANA = [
       null,
       new Letter("よ", "yo", "yo.mp3", "ya_hiragana"),
     ],
-    imgPath: "ya_row_boss.png",
+    imgPath: "08_akabeko.png",
   },
   {
     title: "ra_hiragana",
@@ -98,7 +98,7 @@ export const HIRAGANA = [
       new Letter("れ", "re", "re.mp3", "ra_hiragana"),
       new Letter("ろ", "ro", "ro.mp3", "ra_hiragana"),
     ],
-    imgPath: "ra_row_boss.png",
+    imgPath: "09_nurikabe.png",
   },
   {
     title: "wa_hiragana",
@@ -109,7 +109,7 @@ export const HIRAGANA = [
       null,
       new Letter("ん", "n", "n.mp3", "wa_hiragana"),
     ],
-    imgPath: "wa_row_boss.png",
+    imgPath: "10_onzooshi.png",
   },
 ];
 

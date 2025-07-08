@@ -4,7 +4,7 @@ import KanaItem from "./KanaItem";
 import { Image } from "../ui/image";
 import { useEffect, useState } from "react";
 import { getKanaStatus } from "@/db/db";
-
+import { ROW_BOSS_IMAGES } from "@/constants/RowBossImages";
 interface KanaRowProps {
   rowObj: {
     title: string;
@@ -33,12 +33,12 @@ const KanaRow: React.FC<KanaRowProps> = ({ rowObj }) => {
   return (
     <Box
       className={`
-        flex flex-row w-full my-1 px-1 py-2 rounded-lg
+        flex flex-row w-full my-1 px-1 rounded-lg
         ${status.highlight && "bg-unlocked-bg border-unlocked-border border-2"}
         ${status.unlock ? "bg-unlocked-bg" : "bg-locked-bg"}
         `}
     >
-      <Box className="w-4/5 flex flex-row gap-1">
+      <Box className="w-4/5 flex flex-row gap-1 h-full items-center">
         {kanaItems.map((item, index) => {
           if (item !== null) {
             return (
@@ -55,9 +55,11 @@ const KanaRow: React.FC<KanaRowProps> = ({ rowObj }) => {
           }
         })}
       </Box>
-      {/* Placeholder for boss image */}
-      <Box className="w-1/5 h-full bg-violet-400"></Box>
-      {/* <Image className="w-1/5" source={}/> */}
+      <Image
+        className="w-1/5 object-contain"
+        source={ROW_BOSS_IMAGES[rowObj.imgPath]}
+        alt={"boss image"}
+      />
     </Box>
   );
 };
