@@ -1,0 +1,23 @@
+export const KANA_STATUS = {
+  a_hiragana: { highlight: true, unlock: true },
+  ka_hiragana: { highlight: false, unlock: false },
+  sa_hiragana: { highlight: false, unlock: false },
+  ta_hiragana: { highlight: false, unlock: false },
+  na_hiragana: { highlight: false, unlock: false },
+  ha_hiragana: { highlight: false, unlock: false },
+  ma_hiragana: { highlight: false, unlock: false },
+  ya_hiragana: { highlight: false, unlock: false },
+  ra_hiragana: { highlight: false, unlock: false },
+  wa_hiragana: { highlight: false, unlock: false },
+
+  a_katakana: { highlight: false, unlock: false },
+  ka_katakana: { highlight: false, unlock: false },
+  sa_katakana: { highlight: false, unlock: false },
+  ta_katakana: { highlight: false, unlock: false },
+  na_katakana: { highlight: false, unlock: false },
+  ha_katakana: { highlight: false, unlock: false },
+  ma_katakana: { highlight: false, unlock: false },
+  ya_katakana: { highlight: false, unlock: false },
+  ra_katakana: { highlight: false, unlock: false },
+  wa_katakana: { highlight: false, unlock: false },
+};
