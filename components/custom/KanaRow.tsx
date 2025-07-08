@@ -34,7 +34,7 @@ const KanaRow: React.FC<KanaRowProps> = ({ rowObj }) => {
     <Box
       className={`
         flex flex-row w-full my-1 px-1 rounded-lg
-        ${status.highlight && "bg-unlocked-bg border-unlocked-border border-2"}
+        ${status.highlight && "bg-unlocked-bg border-highlight-border border-2"}
         ${status.unlock ? "bg-unlocked-bg" : "bg-locked-bg"}
         `}
     >
@@ -55,10 +55,12 @@ const KanaRow: React.FC<KanaRowProps> = ({ rowObj }) => {
           }
         })}
       </Box>
+
       <Image
-        className="w-1/5 object-contain"
+        className="flex-1 object-contain"
         source={ROW_BOSS_IMAGES[rowObj.imgPath]}
         alt={"boss image"}
+        style={{ tintColor: "black" }}
       />
     </Box>
   );
