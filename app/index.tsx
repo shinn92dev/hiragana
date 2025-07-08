@@ -13,11 +13,11 @@ export default function Home() {
       await initializeKanaStatus();
     };
     initStatus();
-    const getStatus = async () => {
-      const status = await getAllKanaStatus();
-      console.log(status);
-    };
-    getStatus();
+    // const getStatus = async () => {
+    //   const status = await getAllKanaStatus();
+    //   console.log(status);
+    // };
+    // getStatus();
   }, []);
   return (
     <Box className="flex-1 h-[100vh] pt-10 px-3 flex-col justify-center items-center gap-10">
