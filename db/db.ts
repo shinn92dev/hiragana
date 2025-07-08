@@ -2,8 +2,12 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { KANA_STATUS } from "@/constants/Progress";
 
 type KanaStatus = {
-  [key: string]: { highlight: boolean; unlock: boolean };
+  [key: string]: KanaStatusItems;
 };
+interface KanaStatusItems {
+  highlight: boolean;
+  unlock: boolean;
+}
 
 export const initializeKanaStatus = async () => {
   try {
@@ -12,7 +16,7 @@ export const initializeKanaStatus = async () => {
       await AsyncStorage.setItem("kanaStatus", JSON.stringify(KANA_STATUS));
     }
   } catch (error) {
-    console.error("❌Fail to initialize KANA STATUS:", error);
+    console.error("❌Failed to initialize KANA STATUS:", error);
   }
 };
 
@@ -43,7 +47,7 @@ export const getKanaStatus = async (key: string) => {
       return parsedStatus[key];
     }
   } catch (error) {
-    console.error("❌ Faile to get kana status:", error);
+    console.error("❌ Failed to get kana status:", error);
   }
 };
 
@@ -64,6 +68,26 @@ export const updateKanaStatus = async (
       await AsyncStorage.setItem("kanaStatus", JSON.stringify(parsedStatus));
     }
   } catch (error) {
-    console.error("❌ Faile to update kana status:", error);
+    console.error("❌ Failed to update kana status:", error);
+  }
+};
+
+export const isAllUnlocked = async () => {
+  try {
+    const stored = await AsyncStorage.getItem("kanaStatus");
+    if (!stored) {
+      throw Error("kanaStatus does not exist.");
+    }
+
+    const parsedStatus: Record<string, KanaStatusItems> = JSON.parse(stored);
+
+    const allUnlocked = Object.values(parsedStatus).every(
+      (item) => item.unlock === true
+    );
+
+    return allUnlocked;
+  } catch (error) {
+    console.error("❌ Failed to get kana unlocked status:", error);
+    return false;
   }
 };
