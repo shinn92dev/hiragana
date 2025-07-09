@@ -12,6 +12,7 @@ interface KanaStatusItems {
 export const initializeKanaStatus = async () => {
   try {
     const exist = await AsyncStorage.getItem("kanaStatus");
+
     if (!exist) {
       await AsyncStorage.setItem("kanaStatus", JSON.stringify(KANA_STATUS));
     }

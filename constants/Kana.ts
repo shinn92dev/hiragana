@@ -24,6 +24,17 @@ export const HIRAGANA = [
     imgPath: "02_rainjin.png",
   },
   {
+    title: "ga_hiragana",
+    data: [
+      new Letter("が", "ga", "ga.m4a", "ga_hiragana"),
+      new Letter("ぎ", "gi", "gi.m4a", "ga_hiragana"),
+      new Letter("ぐ", "gu", "gu.m4a", "ga_hiragana"),
+      new Letter("げ", "ge", "ge.m4a", "ga_hiragana"),
+      new Letter("ご", "go", "go.m4a", "ga_hiragana"),
+    ],
+    imgPath: "02_huujin.png",
+  },
+  {
     title: "sa_hiragana",
     data: [
       new Letter("さ", "sa", "sa.m4a", "sa_hiragana"),
@@ -35,6 +46,17 @@ export const HIRAGANA = [
     imgPath: "03_kappa1.png",
   },
   {
+    title: "za_hiragana",
+    data: [
+      new Letter("ざ", "za", "za.m4a", "za_hiragana"),
+      new Letter("じ", "ji", "ji.m4a", "za_hiragana"),
+      new Letter("ず", "zu", "zu.m4a", "za_hiragana"),
+      new Letter("ぜ", "ze", "ze.m4a", "za_hiragana"),
+      new Letter("ぞ", "zo", "zo.m4a", "za_hiragana"),
+    ],
+    imgPath: "03_kappa1.png",
+  },
+  {
     title: "ta_hiragana",
     data: [
       new Letter("た", "ta", "ta.m4a", "ta_hiragana"),
@@ -42,6 +64,17 @@ export const HIRAGANA = [
       new Letter("つ", "tsu", "tsu.m4a", "ta_hiragana"),
       new Letter("て", "te", "te.m4a", "ta_hiragana"),
       new Letter("と", "to", "to.m4a", "ta_hiragana"),
+    ],
+    imgPath: "04_anime_girl2.png",
+  },
+  {
+    title: "da_hiragana",
+    data: [
+      new Letter("だ", "da", "da.m4a", "da_hiragana"),
+      new Letter("ぢ", "ji", "ji.m4a", "da_hiragana"),
+      new Letter("づ", "zu", "zu.m4a", "da_hiragana"),
+      new Letter("で", "de", "de.m4a", "da_hiragana"),
+      new Letter("ど", "do", "do.m4a", "da_hiragana"),
     ],
     imgPath: "04_anime_girl2.png",
   },
@@ -66,6 +99,28 @@ export const HIRAGANA = [
       new Letter("ほ", "ho", "ho.m4a", "ha_hiragana"),
     ],
     imgPath: "06_oni1.png",
+  },
+  {
+    title: "ba_hiragana",
+    data: [
+      new Letter("ば", "ba", "ba.m4a", "ba_hiragana"),
+      new Letter("び", "bi", "bi.m4a", "ba_hiragana"),
+      new Letter("ぶ", "bu", "bu.m4a", "ba_hiragana"),
+      new Letter("べ", "be", "be.m4a", "ba_hiragana"),
+      new Letter("ぼ", "bo", "bo.m4a", "ba_hiragana"),
+    ],
+    imgPath: "06_oni2.png",
+  },
+  {
+    title: "pa_hiragana",
+    data: [
+      new Letter("ぱ", "pa", "pa.m4a", "pa_hiragana"),
+      new Letter("ぴ", "pi", "pi.m4a", "pa_hiragana"),
+      new Letter("ぷ", "pu", "pu.m4a", "pa_hiragana"),
+      new Letter("ぺ", "pe", "pe.m4a", "pa_hiragana"),
+      new Letter("ぽ", "po", "po.m4a", "pa_hiragana"),
+    ],
+    imgPath: "06_oni2.png",
   },
   {
     title: "ma_hiragana",

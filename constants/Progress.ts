@@ -10,6 +10,12 @@ export const KANA_STATUS = {
   ra_hiragana: { highlight: false, unlock: false },
   wa_hiragana: { highlight: false, unlock: false },
 
+  ga_hiragana: { highlight: false, unlock: false },
+  za_hiragana: { highlight: false, unlock: false },
+  da_hiragana: { highlight: false, unlock: false },
+  ba_hiragana: { highlight: false, unlock: false },
+  pa_hiragana: { highlight: false, unlock: false },
+
   a_katakana: { highlight: false, unlock: false },
   ka_katakana: { highlight: false, unlock: false },
   sa_katakana: { highlight: false, unlock: false },
@@ -20,4 +26,10 @@ export const KANA_STATUS = {
   ya_katakana: { highlight: false, unlock: false },
   ra_katakana: { highlight: false, unlock: false },
   wa_katakana: { highlight: false, unlock: false },
+
+  ga_katakana: { highlight: false, unlock: false },
+  za_katakana: { highlight: false, unlock: false },
+  da_katakana: { highlight: false, unlock: false },
+  ba_katakana: { highlight: false, unlock: false },
+  pa_katakana: { highlight: false, unlock: false },
 };
