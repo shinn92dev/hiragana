@@ -24,7 +24,7 @@ const QuestFooter = () => {
     <Pressable
       className="w-full py-5 my-10"
       onPress={() => {
-        // router.push("");
+        router.push("/quest");
       }}
     >
       <Box className="w-4/5 bg-highlight-border" style={styles.buttonContainer}>
