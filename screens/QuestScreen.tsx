@@ -27,13 +27,18 @@ const QuestScreen = () => {
   const [words, setWords] = useState<string[]>([]);
   const [inputText, setInputText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isCorrect, setIsCorrect] = useState(false);
 
   const handleInputChange = (text: string) => {
     setInputText(text);
 
     if (text == currentWord) {
-      setCurrentIndex(currentIndex + 1);
-      setInputText("");
+      setIsCorrect(true);
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => prevIndex + 1); // 다음 문제로
+        setInputText(""); // 입력창 초기화
+        setIsCorrect(false); // 정답 상태 해제 (배경색이 원래대로 돌아옴)
+      }, 1000);
     }
   };
 
@@ -70,7 +75,10 @@ const QuestScreen = () => {
     >
       <Box className="flex-1">
         <Box
-          style={styles.animationContainer}
+          style={[
+            styles.animationContainer,
+            { backgroundColor: isCorrect ? "lightgreen" : "coral" },
+          ]}
           className="flex-row justify-center items-center"
         >
           <Text>Animation will be located here.</Text>
@@ -113,7 +121,6 @@ export default QuestScreen;
 const styles = StyleSheet.create({
   animationContainer: {
     flex: 1,
-    backgroundColor: "coral",
   },
   questionContainer: {
     height: 70,
