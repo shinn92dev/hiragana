@@ -11,6 +11,7 @@ import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 import { useColorScheme } from "@/components/useColorScheme";
 import { Slot } from "expo-router";
 import { Stack } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 import "../global.css";
 
@@ -60,18 +61,27 @@ function RootLayoutNav() {
   const colorScheme = useColorScheme();
 
   return (
-    <GluestackUIProvider mode={colorScheme === "dark" ? "dark" : "light"}>
-      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-        {/* <Slot /> */}
-        <Stack
-          screenOptions={{
-            headerShown: true, // ✅ 헤더 보이게 설정
-            headerStyle: { backgroundColor: "#fbbf24" },
-            headerTintColor: "#000",
-            headerTitleStyle: { fontWeight: "bold" },
-          }}
-        />
-      </ThemeProvider>
-    </GluestackUIProvider>
+    <SafeAreaView
+      style={{
+        flex: 1,
+        backgroundColor: colorScheme === "dark" ? "black" : "white",
+      }}
+    >
+      <GluestackUIProvider mode={colorScheme === "dark" ? "dark" : "light"}>
+        <ThemeProvider
+          value={colorScheme === "dark" ? DarkTheme : DefaultTheme}
+        >
+          {/* <Slot /> */}
+          <Stack
+            screenOptions={{
+              headerShown: false, // ✅ 헤더 보이게 설정
+              headerStyle: { backgroundColor: "#fbbf24" },
+              headerTintColor: "#000",
+              headerTitleStyle: { fontWeight: "bold" },
+            }}
+          />
+        </ThemeProvider>
+      </GluestackUIProvider>{" "}
+    </SafeAreaView>
   );
 }
