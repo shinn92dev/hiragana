@@ -18,7 +18,6 @@ import {
 const shuffle = (array: string[]) => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-
     [array[i], array[j]] = [array[j], array[i]];
   }
 };
@@ -26,6 +25,18 @@ const shuffle = (array: string[]) => {
 const QuestScreen = () => {
   const textInputRef = useRef<React.ElementRef<typeof InputField>>(null);
   const [words, setWords] = useState<string[]>([]);
+  const [inputText, setInputText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleInputChange = (text: string) => {
+    setInputText(text);
+
+    if (text == currentWord) {
+      setCurrentIndex(currentIndex + 1);
+      setInputText("");
+    }
+  };
+
   useEffect(() => {
     const fetchQuestWords = async () => {
       const status = await getAllKanaStatus();
@@ -49,7 +60,8 @@ const QuestScreen = () => {
   useEffect(() => {
     console.log(words);
   }, [words]);
-  const currentWord = words[0];
+  const currentWord = words[currentIndex];
+
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}
@@ -87,6 +99,8 @@ const QuestScreen = () => {
             placeholder="Defeat the Monster! Type here to attack!"
             autoFocus={true}
             blurOnSubmit={false}
+            value={inputText}
+            onChangeText={handleInputChange}
           />
         </Input>
       </Box>
