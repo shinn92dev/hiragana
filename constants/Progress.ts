@@ -33,3 +33,38 @@ export const KANA_STATUS = {
   ba_katakana: { highlight: false, unlock: false },
   pa_katakana: { highlight: false, unlock: false },
 };
+
+export const HIRAGANA_ORDER = [
+  "a_hiragana",
+  "ka_hiragana",
+  "ga_hiragana",
+  "sa_hiragana",
+  "za_hiragana",
+  "ta_hiragana",
+  "da_hiragana",
+  "na_hiragana",
+  "ha_hiragana",
+  "ba_hiragana",
+  "pa_hiragana",
+  "ma_hiragana",
+  "ya_hiragana",
+  "ra_hiragana",
+  "wa_hiragana",
+];
+export const KATAKANA_ORDER = [
+  "a_katakana",
+  "ka_katakana",
+  "ga_katakana",
+  "sa_katakana",
+  "za_katakana",
+  "ta_katakana",
+  "da_katakana",
+  "na_katakana",
+  "ha_katakana",
+  "ba_katakana",
+  "pa_katakana",
+  "ma_katakana",
+  "ya_katakana",
+  "ra_katakana",
+  "wa_katakana",
+];
